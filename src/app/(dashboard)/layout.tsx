@@ -13,7 +13,13 @@ function Layout({ children }: { children: React.ReactNode }) {
           <UserButton afterSignOutUrl="/sign-in" />
         </div>
       </nav>
-      <main className="flex w-full flex-grow">{children}</main>
+      <div className="flex bg-red-200 w-full flex-col items-center">
+        <div className="flex flex-grow w-full justify-center dark:bg-netrual-950">
+          <div className="max-w-[920px] flex flex-col flex-grow px-4 py-12">
+            {children}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
