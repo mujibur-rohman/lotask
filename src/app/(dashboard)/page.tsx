@@ -1,6 +1,7 @@
 import { Skeleton } from "@/components/ui/skeleton";
 import { currentUser } from "@clerk/nextjs";
 import { Suspense } from "react";
+import CollectionLists from "./_components/CollectionLists";
 
 export default async function Home() {
   return (
@@ -8,7 +9,9 @@ export default async function Home() {
       <Suspense fallback={<WelcomeMsgFallback />}>
         <WelcomMsg />
       </Suspense>
-      <Suspense fallback={<div>Loading collections...</div>}>Test</Suspense>
+      <Suspense fallback={<div>Loading collections...</div>}>
+        <CollectionLists />
+      </Suspense>
     </>
   );
 }
